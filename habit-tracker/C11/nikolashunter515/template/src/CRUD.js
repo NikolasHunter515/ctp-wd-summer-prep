@@ -24,7 +24,7 @@ export function writeDb(habit){
 //target is also habit object
 export function deleteDb(target){
     habits = readDb();
-    habits = habits.filter((name) => name.date === target.date);
+    habits = habits.filter((name) => name.date === target.date && name.habit === target.habit);
 
     localStorage.setItem('habits', JSON.stringify(habits));
 }
